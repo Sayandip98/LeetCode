@@ -1,5 +1,5 @@
 class Solution {
-  public static void moveZeroes(int[] nums) {
+  public void moveZeroes(int[] nums) {
     int j = 0;
     for (int i = 0; i < nums.length; i++) {
       if (nums[i] != 0) {
@@ -13,8 +13,11 @@ class Solution {
   }
 
   public static void main(String[] args) {
+    Solution obj = new Solution();
     int[] nums = { 0, 1, 0, 3, 12 };
-    moveZeroes(nums);
-    System.out.print(Arrays.toString(nums));
+    obj.moveZeroes(nums);
+    for (int num : nums) {
+      System.out.print(num + " ");
+    }
   }
 }
